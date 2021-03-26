@@ -1,0 +1,73 @@
+{#{% extends 'index.html' %}#}
+{% block content %}
+    <form method="post" action="/narou/take_novel_from_api">
+        <span>取得数[required]：</span><input name="limit" type="number" value="10" placeholder="0-2500"><br>
+        <span>開始位置：</span><input name="start" type="number" value="0" placeholder="0-2000"><br>
+        <span>最終掲載日：</span><input name="min_lastup" type="date"> から
+        <input name="max_lastup" type="date"><br>
+        <span>読了時間：</span><input name="min_lastup" type="number" placeholder="0">分 から
+        <input name="max_time"
+               type="number"
+               placeholder="n">分<br>
+        <span>文字数：</span><input name="min_length" type="number" placeholder="0">文字 から
+        <input name="max_length"
+               type="number"
+               placeholder="n">文字<br>
+        <span>会話率：</span><input name="min_kaiwa" type="number" placeholder="0">％ から
+        <input name="max_kaiwa"
+               type="number"
+               placeholder="100">％<br>
+        <span>出力順序指定：</span>
+        <select name="order">
+            {% for o in Order %}
+                <option value="{{ o.value[0] }}">{{ o.value[1] }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <span>カテゴリ指定：</span>
+        <select name="required_category">
+
+            {% for o in Category %}
+                <option value="{{ o.value[0] }}">{{ o.value[1] }}</option>
+            {% endfor %}
+        </select>
+        <span>カテゴリ除外指定：</span>
+        <select name="ng_category">
+
+            {% for o in Category %}
+                <option value="{{ o.value[0] }}">{{ o.value[1] }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <span>ジャンル指定：</span>
+        <select name="required_genre">
+
+            {% for o in Genre %}
+                <option value="{{ o.value[0] }}">{{ o.value[1] }}</option>
+            {% endfor %}
+        </select>
+        <span>ジャンル除外指定：</span>
+        <select name="ng_genre">
+            {% for o in Genre %}
+                <option value="{{ o.value[0] }}">{{ o.value[1] }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <span>小説のタイプ指定：</span>
+        <select name="novel_type">
+            {% for o in NovelType %}
+                <option value="{{ o.value[0] }}">{{ o.value[1] }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <span>単語指定：</span><input name="required_words" type="text" placeholder="word, word2, word3, ..."><br>
+        <span>単語除外指定：</span><input name="ng_words" type="text" placeholder="word, word2, word3, ..."><br>
+        <span>user id：</span><input name="user_ids" type="number" placeholder="0, 1, 2, ..."><br>
+        <span>ncode：</span><input name="ncodes" type="text" placeholder="n0000aa, n0000ab, ..."><br>
+        <br>
+        <input type="submit">
+    </form>
+{% endblock %}
+
+<br>
+<a href="/">back</a>

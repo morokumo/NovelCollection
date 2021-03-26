@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>ncode</th>
+        <th>title</th>
+        <th>category</th>
+        <th>genre</th>
+    </tr>
+
+    {% for k in NovelInfo %}
+        <tr>
+            <th>{{ k.novel_code }}</th>
+            <th>{{ k.title }}</th>
+            <th>{{ k.category }}</th>
+            <th>{{ k.genre }}</th>
+        </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+<a href="/">back</a>
+</body>
+</html>

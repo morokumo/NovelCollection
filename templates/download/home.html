@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form method="post" action="/download/get_novel">
+    <table>
+        <tr>
+            <td><span>取得数：</span></td>
+            <td><input name="limit" type="number" value="10"></td>
+        </tr>
+        <tr>
+            <td><span>novel_code：</span></td>
+            <td><input name="novel_code" type="text" value=""></td>
+        </tr>
+
+        <tr>
+            <td><span>著者：</span></td>
+            <td><input name="writer" type="text" value=""></td>
+        </tr>
+        <tr>
+            <td><span>タイトル（"%"で部分一致）：</span></td>
+            <td><input name="title" type="text" value=""></td>
+        </tr>
+        <tr>
+            <td><span>あらすじ（"%"で部分一致）：</span></td>
+            <td><input name="story" type="text" value=""></td>
+        </tr>
+        <tr>
+            <td><span>サイト：</span></td>
+            <td><select name="site_genre">
+                {% for c in site %}
+                    <option value="{{ c.value[0] }}">{{ c.value[1] }}</option>
+                {% endfor %}
+            </select></td>
+        </tr>
+        <tr>
+            <td><span>カテゴリ：</span></td>
+            <td><select name="category">
+                {% for c in category %}
+                    <option value="{{ c }}">{{ c }}</option>
+                {% endfor %}
+            </select></td>
+        </tr>
+        <tr>
+            <td><span>ジャンル（カテゴリよりジャンル優先）：</span></td>
+            <td><select name="genre">
+                {% for c in genre %}
+                    <option value="{{ c }}">{{ c }}</option>
+                {% endfor %}
+            </select></td>
+        </tr>
+        {#        <tr>#}
+        {#            <td><span>タグ（","区切りで入力）：</span></td>#}
+        {#            <td><input name="tag" type="text" value=""></td>#}
+        {#            <td><span>タグ一覧</span></td>#}
+        {#            <td>#}
+        {#                <select name="_">#}
+        {#                    {% for c in tag_name %}#}
+        {#                        <option value="{{ c }}">{{ c }}</option>#}
+        {#                    {% endfor %}#}
+        {#                </select></td>#}
+        {#        </tr>#}
+        <tr>
+            <td><span>最初の投稿日時：</span></td>
+            <td><input name="general_firstup" type="date" value=""></td>
+        </tr>
+        <tr>
+            <td><span>最後の投稿日時：</span></td>
+            <td><input name="general_lastup" type="date" value=""></td>
+        </tr>
+        <tr>
+            <td><span>連載：</span></td>
+            <td><input name="is_rensai" type="checkbox" checked="checked"></td>
+        </tr>
+        <tr>
+            <td><span>短編：</span></td>
+            <td><input name="is_tanpen" type="checkbox" checked="checked"></td>
+        </tr>
+        <tr>
+            <td><span>連載終了のみ：</span></td>
+            <td><input name="is_end" type="checkbox"></td>
+        </tr>
+        <tr>
+            <td><span>エピソード数：</span></td>
+            <td><input name="episode_min" type="number" value=""></td>
+            <td>から</td>
+            <td><input name="episode_max" type="number" value=""></td>
+            <td>まで</td>
+        </tr>
+        <tr>
+            <td><span>文字数：</span></td>
+            <td><input name="length_min" type="number" value=""></td>
+            <td>から</td>
+            <td><input name="length_max" type="number" value=""></td>
+            <td>まで</td>
+        </tr>
+        <tr>
+            <td><span>お気に入り数：</span></td>
+            <td><input name="fav_novel_cnt_min" type="number" value=""></td>
+            <td>から</td>
+            <td><input name="fav_novel_cnt_max" type="number" value=""></td>
+            <td>まで</td>
+        </tr>
+        <tr>
+            <td><span>レビュー数：</span></td>
+            <td><input name="review_cnt_min" type="number" value=""></td>
+            <td>から</td>
+            <td><input name="review_cnt_max" type="number" value=""></td>
+            <td>まで</td>
+        </tr>
+
+        <tr>
+            <td><span>評価ポイント：</span></td>
+            <td><input name="all_hyoka_cnt_min" type="number" value=""></td>
+            <td>から</td>
+            <td><input name="all_hyoka_cnt_max" type="number" value=""></td>
+            <td>まで</td>
+        </tr>
+        <tr>
+            <td><span>R-18小説を含める：</span></td>
+            <td><input name="r-18" type="checkbox"></td>
+
+        </tr>
+        <tr>
+            <td><span>トークン（sos eos）を付与：</span></td>
+            <td><input name="limit" type="checkbox"></td>
+
+        </tr>
+        <tr>
+            <td><input type="submit" value="取得"></td>
+        </tr>
+    </table>
+</form>
+<br>
+<br>
+<a href="/">back</a>
+</body>
+</html>
