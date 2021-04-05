@@ -39,8 +39,6 @@ def hameln_executor():
         while True:
             while hameln_request_queue.qsize() > 0:
                 start, end = hameln_request_queue.get()
-                print(start, end)
-
                 logger.debug(f'[hameln] get novels')
                 service.take_novels(start, end)
                 logger.debug('[hameln] completed.')

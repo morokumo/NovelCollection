@@ -1,7 +1,7 @@
 import gzip
 from io import BytesIO
 
-from flask import Blueprint, render_template, make_response, request, send_file
+from flask import Blueprint, render_template, make_response, request
 
 from config import LOGGER
 from src.Model.Data import Novel
