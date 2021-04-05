@@ -1,0 +1,77 @@
+appdirs==1.4.4
+asn1crypto==1.0.1
+attrs==20.3.0
+axial-positional-embedding==0.2.1
+beautifulsoup4==4.9.3
+certifi==2020.12.5
+cffi==1.12.3
+chardet==3.0.4
+click==7.1.2
+cloudpickle==1.6.0
+colorama==0.4.4
+colorlog==4.7.2
+conda==4.9.2
+conda-package-handling==1.6.0
+cryptography==2.7
+cycler==0.10.0
+dataclasses==0.6
+diff-match-patch==20200713
+Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
+future==0.18.2
+gensim==3.8.3
+gym==0.17.3
+idna==2.8
+importlib-metadata==3.4.0
+itsdangerous==1.1.0
+Janome==0.4.1
+Jinja2 @ file:///tmp/build/80754af9/jinja2_1612213139570/work
+joblib @ file:///tmp/build/80754af9/joblib_1601912903842/work
+jsonschema==3.2.0
+kiwisolver @ file:///opt/concourse/worker/volumes/live/7f2d375c-30f6-458e-63e3-3be3b4be2918/volume/kiwisolver_1604014611853/work
+local-attention==1.1.1
+lxml==4.6.2
+MarkupSafe==1.1.1
+matplotlib @ file:///opt/concourse/worker/volumes/live/61624fbb-2a49-420f-6e89-f3df5b5e7cab/volume/matplotlib-base_1603373809385/work
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+nltk @ file:///tmp/build/80754af9/nltk_1592496090529/work
+numpy @ file:///opt/concourse/worker/volumes/live/a1b5ea96-b05c-40ba-5dfb-4542ece1c186/volume/numpy_and_numpy_base_1603491228242/work
+olefile==0.46
+online-judge-api-client==10.8.0
+online-judge-tools==11.1.2
+pandas @ file:///opt/concourse/worker/volumes/live/bfd63b8c-6035-4ed3-5bce-5690df409bf9/volume/pandas_1602088141563/work
+Pillow @ file:///opt/concourse/worker/volumes/live/95e97a5f-0d90-45c8-4080-207143da6ebf/volume/pillow_1603822285720/work
+product-key-memory==0.1.10
+pycosat==0.6.3
+pycparser==2.19
+pyglet==1.5.0
+pyOpenSSL==19.0.0
+pyparsing==2.4.7
+pyrsistent==0.17.3
+PySocks==1.7.1
+python-dateutil==2.8.1
+pytz @ file:///tmp/build/80754af9/pytz_1606604771399/work
+reformer-pytorch==1.2.4
+regex @ file:///opt/concourse/worker/volumes/live/75a20732-2306-4d51-79ce-516009aca709/volume/regex_1606773011423/work
+requests==2.22.0
+ruamel-yaml==0.15.46
+scikit-learn @ file:///opt/concourse/worker/volumes/live/2dacdc11-21e7-44f5-57b4-6b8eb6ceb626/volume/scikit-learn_1598376924598/work
+scipy==1.5.4
+sentencepiece==0.1.94
+six==1.12.0
+smart-open==3.0.0
+soupsieve==2.1
+threadpoolctl @ file:///tmp/tmp9twdgx9k/threadpoolctl-2.1.0-py3-none-any.whl
+toml==0.10.2
+torch==1.7.0
+torchaudio==0.7.0a0+ac17b64
+torchtext==0.8.0
+torchvision==0.8.1
+tornado==6.0.4
+tqdm==4.36.1
+typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1598376058250/work
+Unidecode==1.1.1
+urllib3==1.24.2
+Werkzeug @ file:///home/ktietz/src/ci/werkzeug_1611932622770/work
+zipp==3.4.0
